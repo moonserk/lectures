@@ -1,0 +1,24 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{graphs}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{makeidx}
+
+\usepackage[english,russian]{babel}
+
+\begin{document}
+
+\begin{tikzpicture}[]
+\path (0,0) node(x) {ЧТо такое зорошо и что такое плохо}
+(3,1) node[circle,draw](y) {$\int_1^2 x \mathrm d x$};
+\draw[->,blue] (x) -- (y);
+\draw[->,red] (x) -| node[near start,below] {label} (y);
+\draw[->,orange] (x) .. controls +(up:1cm) and +(left:1cm) .. node[above,sloped] {label} (y);
+\end{tikzpicture}
+
+\end{document}
