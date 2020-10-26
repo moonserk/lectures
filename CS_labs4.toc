@@ -1,0 +1,32 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Лабораторная работа №1. Операции с двоичными числами}{2}%
+\contentsline {subsection}{\numberline {1.1}Теоретические основы}{2}%
+\contentsline {subsubsection}{\numberline {1.1.1}Сложение и вычитание чисел со знаком в дополнительном коде}{3}%
+\contentsline {subsection}{\numberline {1.2}Задание на лабораторную работу}{5}%
+\contentsline {subsection}{\numberline {1.3}Содержание отчета}{6}%
+\contentsline {subsection}{\numberline {1.4}Литература}{6}%
+\contentsline {section}{\numberline {2}Лабораторная работа №3. Обработка данных в электронных таблицах}{7}%
+\contentsline {subsection}{\numberline {2.1}Теоретические основы}{7}%
+\contentsline {subsubsection}{\numberline {2.1.1}Рабочая книга и рабочий лист. Строки, столбцы, ячейки.}{8}%
+\contentsline {subsubsection}{\numberline {2.1.2}Содержание электронной таблицы}{9}%
+\contentsline {subsection}{\numberline {2.2}Задание на лабораторную работу}{10}%
+\contentsline {subsubsection}{\numberline {2.2.1}Заполните таблицу умножения используя формулы}{10}%
+\contentsline {subsubsection}{\numberline {2.2.2}Вычислить значения функции $y=\sin x$. Значения аргумента х изменяется от 0 до 10 с шагом 1. Постройте гладкий график функции по таблице значений.}{10}%
+\contentsline {subsubsection}{\numberline {2.2.3}Вычислить значения функции $x=16 * \sin ^{3}t$ и $y = 13 * \cos (t) - 5 * \cos (2t) - 2 * \cos (3t) - \cos (4t)$. Значения аргумента x изменяется от 0 до 6.4 с шагом 0.1. Постройте гладкий график функции по таблице значений}{11}%
+\contentsline {subsubsection}{\numberline {2.2.4}}{11}%
+\contentsline {subsection}{\numberline {2.3}Содержание отчета}{12}%
+\contentsline {subsection}{\numberline {2.4}Литература}{12}%
+\contentsline {section}{\numberline {3}Лабораторная работа №4. \newline Основы работы с базами данных}{13}%
+\contentsline {subsection}{\numberline {3.1}Теоретические основы}{13}%
+\contentsline {subsubsection}{\numberline {3.1.1}Свойства сущностей}{14}%
+\contentsline {subsubsection}{\numberline {3.1.2}Ключ сущности}{14}%
+\contentsline {subsubsection}{\numberline {3.1.3}Реляционная модель данных}{15}%
+\contentsline {subsubsection}{\numberline {3.1.4}Нормализация}{15}%
+\contentsline {subsection}{\numberline {3.2}Практическая часть}{16}%
+\contentsline {subsubsection}{\numberline {3.2.1}Создание базы данных}{16}%
+\contentsline {subsubsection}{\numberline {3.2.2}Создание таблиц}{16}%
+\contentsline {subsubsection}{\numberline {3.2.3}Нормализация}{18}%
+\contentsline {subsubsection}{\numberline {3.2.4}Наполнение таблиц}{20}%
+\contentsline {subsubsection}{\numberline {3.2.5}Создание запросов}{20}%
+\contentsline {subsection}{\numberline {3.3}Задание на лабораторную работу}{25}%
+\contentsline {subsection}{\numberline {3.4}Содержание отчета}{25}%
