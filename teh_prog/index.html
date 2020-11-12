@@ -1,0 +1,46 @@
+<html><head><script>
+// <![CDATA[
+function addItem (value) {
+    if (!value) {
+        return;
+    }
+    var myselect = document.getElementById('myselect');
+    var newoption = myselect.appendChild(document.createElement('li'));
+    newoption.value = value;
+    newoption.innerHTML=value;  
+}
+
+function removeCurrentItem () {
+    var myselect = document.getElementById('myselect');
+    if (myselect.selectedIndex === -1) {
+        return;
+    }
+    var selectedOption = myselect.options[myselect.selectedIndex];
+    selectedOption.parentNode.removeChild(selectedOption);
+}
+
+// ]]>
+</script>
+<style>
+body {
+	display: flex;
+	margin: auto 0;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.list{
+	
+}
+</style>
+</head>
+<body>
+	<div>
+    		<ul id="myselect"></ul>
+	</div>
+	<div>
+    		<button onClick="addItem(prompt('enter value'))">+</button>
+    		<button onClick="removeCurrentItem()" />-</button>
+	</div>
+</body>
+</html>
