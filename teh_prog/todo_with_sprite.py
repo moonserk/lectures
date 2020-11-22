@@ -2,12 +2,14 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+from tkinter import Canvas
+from tkinter import PhotoImage
 import sqlite3 as sq
 
 #Создание основного фрейма
 root = tk.Tk()
 root.title('Список дел')
-root.geometry("400x500")
+root.geometry("500x500")
 
 connection = sq.connect('todo.db') # Подключение к базе данных
 cursor = connection.cursor() # Объект для манипулирование базой данных
@@ -61,6 +63,31 @@ def bye():
     if ans:
         root.destroy()
 
+
+
+
+frames = []
+for i in range(100):
+    try:
+        frames.append([PhotoImage(file='spiner.gif',format = 'gif -index %i' %(i))])
+    except:
+        break
+
+def anim():
+    i = 0
+
+    def next_shot():
+        nonlocal i
+        canvas.create_image(0, 0, anchor='nw', image=frames[i])
+        if i < len(frames) - 1:
+            i += 1
+            root.after(50, next_shot)
+        else:
+            canvas.destroy()
+            canvas2.destroy()
+
+    return next_shot
+
 #Инициализация UI компонентов
 title = ttk.Label(root, text = 'Список дел')
 input_label = ttk.Label(root, text='Введите задачу: ')
@@ -69,18 +96,26 @@ list_box = tk.Listbox(root, height=15, selectmode='SINGLE')
 add_btn = ttk.Button(root, text='Добавить', width=20, command=addTask)
 del_btn = ttk.Button(root, text='Удалить', width=20, command=delOne)
 exit_btn = ttk.Button(root, text='Выход', width=20, command=bye)
+canvas2 = Canvas(root, width=500, height=500, bg='white', highlightthickness=0)
+canvas = Canvas(root, width=320, height=240, bg='white', highlightthickness=0)
 
 retrieveDB()
 listUpdate()
 
-input_label.place(x=20, y=40)
-input_entry.place(x=20, y=60)
-add_btn.place(x=20, y=90)
-del_btn.place(x=20, y=120)
-exit_btn.place(x=20, y =305)
-title.place(x=20, y=10)
-list_box.place(x=220, y=60)
+canvas.place(relx=0.5, rely=0.5, anchor='center')
+canvas2.place(x=0,y=0)
+#canvas2.create_rectangle(500, 500, 0, 0, outline='white', fill='white' )
 
+input_label.pack() #place(x=20, y=40)
+input_entry.pack() #place(x=20, y=60)
+add_btn.pack() #place(x=20, y=90)
+del_btn.pack() #place(x=20, y=120)
+exit_btn.pack(side='bottom') #place(x=20, y =305)
+title.pack() #place(x=20, y=10)
+list_box.pack() #place(x=220, y=60)
+#canvas.place(relx=0.5, rely=0.5, anchor=tk.CENTER, relwidth=0.5, relheight=0.5)
+
+anim()()
 #Главный цикл обработки событий
 root.mainloop()
 

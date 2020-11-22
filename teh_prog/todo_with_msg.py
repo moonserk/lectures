@@ -6,7 +6,7 @@ from tkinter import messagebox
 #Создание основного фрейма
 root = tk.Tk()
 root.title('Список дел')
-root.geometry("400x400")
+root.geometry("500x400")
 
 #Инициализация массива для добавления заданий
 tasks = []
@@ -15,7 +15,7 @@ tasks = []
 def addTask():
     word = input_entry.get()
     if len(word)==0:
-        print('Отсутствуют данные', 'Введите задачу')
+        messagebox.showinfo('Отсутствуют данные', 'Введите задачу')
     else:
         tasks.append(word)
         listUpdate()
@@ -29,7 +29,7 @@ def delOne():
             tasks.remove(val)
             listUpdate()
     except:
-        print('Невозможно удалить', 'Не выбрана задача')
+        messagebox.showinfo('Невозможно удалить', 'Не выбрана задача')
 
 #Фукция обновления листа с заданиями
 def listUpdate():
@@ -43,7 +43,9 @@ def clearList():
 
 #Функция выхода из приложения
 def bye():
-    root.destroy()
+    answer = messagebox.askyesno(title="Выход", message="Вы действительно хотите выйти?")
+    if answer:
+        root.destroy()
 
 #Инициализация UI компонентов
 title = ttk.Label(root, text = 'Список дел')
@@ -60,7 +62,7 @@ add_btn.place(x=20, y=90)
 del_btn.place(x=20, y=120)
 exit_btn.place(x=20, y =305)
 title.place(x=20, y=10)
-list_box.place(x=220, y=60)
+list_box.place(x=260, y=60)
 
 #Главный цикл обработки событий
 root.mainloop()

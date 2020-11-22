@@ -1,4 +1,5 @@
-# Подключение библиотек
+import socket
+import pickle
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -8,10 +9,6 @@ import sqlite3 as sq
 root = tk.Tk()
 root.title('Список дел')
 root.geometry("400x500")
-
-connection = sq.connect('todo.db') # Подключение к базе данных
-cursor = connection.cursor() # Объект для манипулирование базой данных
-cursor.execute('create table if not exists tasks (title text)') # Создание таблицы если она не существует
 
 #Инициализация массива для добавления заданий
 tasks = []
@@ -23,7 +20,6 @@ def addTask():
         messagebox.showinfo('Отсутствуют данные', 'Введите задачу')
     else:
         tasks.append(word)
-        cursor.execute('insert into tasks values (?)', (word,)) # Добавление задачи в таблицу
         listUpdate()
         input_entry.delete(0,'end')
 
@@ -34,16 +30,19 @@ def delOne():
         if val in tasks:
             tasks.remove(val)
             listUpdate()
-            cursor.execute('delete from tasks where title = ?', (val,)) # Удаление задачи из таблицы
     except:
             messagebox.showinfo('Невозможно удалить', 'Не выбрана задача')
 
 # Функция для инициализации данных из базы данных в программу
 def retrieveDB():
-        while(len(tasks)!=0):
-            tasks.pop()
-        for row in cursor.execute('select title from tasks'):
-            tasks.append(row[0])
+    sock = socket.socket()
+    sock.connect(('localhost', 9078))
+    data = sock.recv(1024)
+    sock.close()
+    while(len(tasks)!=0):
+        tasks.pop()
+    for row in pickle.loads(data):
+        tasks.append(row)
 
 #Фукция обновления листа с заданиями
 def listUpdate():
@@ -59,6 +58,10 @@ def clearList():
 def bye():
     ans = messagebox.askyesno("Выход?", "Вы действительно хотите выйти?")
     if ans:
+        sock = socket.socket()
+        sock.connect(('localhost', 9078))
+        sock.send(pickle.dumps(tasks))
+        sock.close()
         root.destroy()
 
 #Инициализация UI компонентов
@@ -83,6 +86,3 @@ list_box.place(x=220, y=60)
 
 #Главный цикл обработки событий
 root.mainloop()
-
-connection.commit() # Утверждение изменений в базе данных
-cursor.close() # Закрытие соединения с бд
