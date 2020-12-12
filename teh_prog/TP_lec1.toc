@@ -1,0 +1,45 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Введение}{4}%
+\contentsline {section}{\numberline {2}Отладка ПО}{4}%
+\contentsline {subsection}{\numberline {2.1}Общие вопросы отладки}{4}%
+\contentsline {subsubsection}{\numberline {2.1.1}Отладка и качество ПО}{4}%
+\contentsline {subsubsection}{\numberline {2.1.2}Различия в эффективности отладки}{4}%
+\contentsline {subsubsection}{\numberline {2.1.3}Дефекты как возможности обучения}{5}%
+\contentsline {subsubsection}{\numberline {2.1.4}Неэффективный подход}{6}%
+\contentsline {subsection}{\numberline {2.2}Поиск дефекта}{6}%
+\contentsline {subsubsection}{\numberline {2.2.1}Научный метод отладки}{7}%
+\contentsline {subsubsection}{\numberline {2.2.2}Стабилизация ошибки}{8}%
+\contentsline {subsubsection}{\numberline {2.2.3}Определение источника ошибки}{9}%
+\contentsline {subsubsection}{\numberline {2.2.4}Советы по поиску причин дефектов}{10}%
+\contentsline {subsubsection}{\numberline {2.2.5}Стандартыне техники отладки}{13}%
+\contentsline {subsubsection}{\numberline {2.2.6}Итоги}{15}%
+\contentsline {section}{\numberline {3}Архитектура ПО}{15}%
+\contentsline {subsection}{\numberline {3.1}Критерии хорошей архитектуры}{15}%
+\contentsline {subsection}{\numberline {3.2}Модульная архитектура. Декомпозиция как основа}{17}%
+\contentsline {subsection}{\numberline {3.3}«Правильная» декомпозиция}{19}%
+\contentsline {subsubsection}{\numberline {3.3.1}Иерархическая}{19}%
+\contentsline {subsubsection}{\numberline {3.3.2}Функциональная}{20}%
+\contentsline {subsubsection}{\numberline {3.3.3}High Cohesion + Low Coupling}{20}%
+\contentsline {subsection}{\numberline {3.4}Как ослаблять связанность между модулями}{22}%
+\contentsline {subsubsection}{\numberline {3.4.1}Интерфейсы. Фасад}{22}%
+\contentsline {subsubsection}{\numberline {3.4.2}Dependency Inversion. Корректное создание и получение зависимостей}{24}%
+\contentsline {subsubsection}{\numberline {3.4.3}Замена прямых зависимостей на обмен сообщениями}{26}%
+\contentsline {subsubsection}{\numberline {3.4.4}Замена прямых зависимостей на синхронизацию через общее ядро}{27}%
+\contentsline {subsubsection}{\numberline {3.4.5}Закон Деметры (law of Demeter)}{28}%
+\contentsline {subsubsection}{\numberline {3.4.6}Композиция вместо наследования}{29}%
+\contentsline {section}{\numberline {4}Принцыпы SOLID}{30}%
+\contentsline {subsection}{\numberline {4.1}Принцип единственной ответственности}{30}%
+\contentsline {subsection}{\numberline {4.2}Принцип открытости-закрытости}{32}%
+\contentsline {subsection}{\numberline {4.3}Принцип подстановки Барбары Лисков}{37}%
+\contentsline {subsection}{\numberline {4.4}Принцип разделения интерфейса}{40}%
+\contentsline {subsection}{\numberline {4.5}Принцип инверсии зависимостей}{44}%
+\contentsline {section}{\numberline {5}Антипаттерны}{46}%
+\contentsline {section}{\numberline {6}Continuous integration}{46}%
+\contentsline {section}{\numberline {7}Методология разработки ПО}{46}%
+\contentsline {subsection}{\numberline {7.1}Основные модели разработки ПО}{46}%
+\contentsline {subsubsection}{\numberline {7.1.1}Waterfall (каскадная модель, или «водопад»)}{47}%
+\contentsline {subsubsection}{\numberline {7.1.2}V-образная модель (разработка через тестирование)}{49}%
+\contentsline {subsubsection}{\numberline {7.1.3}Incremental Model (инкрементная модель)}{49}%
+\contentsline {subsubsection}{\numberline {7.1.4}Iterative Model (итеративная модель)}{51}%
+\contentsline {subsubsection}{\numberline {7.1.5}Spiral Model (спиральная модель)}{52}%
+\contentsline {subsection}{\numberline {7.2}Agile}{53}%
